@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <title>MemeGen</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <div id="meme">
+            <div class="img-parent" id="img-parent">
+                <img id="display-meme-img" src="./download.jpg" alt="memepic" class="meme-img" >
+                <h3 class="top-text" id="top-text"></h3>
+                <h3 class="bottom-text" id="bottom-text" >Lorem ipsum dolor sit amet.</h3>
+            </div>
+            <!-- <button onclick="takeshot()">
+                Take Screenshot
+            </button> -->
+        </div>
+        <form action="" id="form">
+            <p class="text-center">Source Image</p>
+            <h6  >From URL</h6>
+            <input id="input-img-url" type="url" oninput="inputUrlFunction(value)" placeholder="paste the link...">
+            <!-- <p>from Local Disk</p> -->
+            <!-- <input style="visibility: hidden;"  type="file" id="img-upload" name="img" accept="image/*" >
+            <label for="img-upload" class="btn upload"><i class="fa fa-upload upload"></i></label>
+            <h6 style=" position: absolute; top: 28%; left: 45%; " >From The local</h6> -->
+            <br>
+
+            <p class="text-center">Meme Text</p>
+            <label>Top Text</label>
+
+            <input type="color" style="visibility: hidden;" oninput="changecolorfn(value)" name="color" id="color-picker">
+            <label for="color-picker" class="btn upload paint-brush"><i class="fa fa-paint-brush "></i></label>
+            <input type="text" name="top-text" oninput="topTextInputFunction(value)" id="top-text-input">
+            <label>Bottom Text</label>
+            <input type="text" name="bottom-text" oninput="bottomTextInputFunction(value)" id="bottom-text-input">
+
+            <p class="text-center">Text Size</p>
+            <label>Top Text</label>
+            <input type="range" min="5" max="100" oninput="topTextSizeFn(value)" name="top-text" class="input-range" id="top-text-input">
+            <label>Bottom Text</label>
+            <input type="range" min="5" max="100" oninput="bottomTextSizeFn(value)" name="bottom-text" class="input-range" id="bottom-text-input">
+            <button  style="display: block; border-radius: 5px; outline: none; border: none; padding: 5px; cursor: pointer; background-color: #aaebb8; color: #618067; position: absolute; margin-top: 5%;" onclick="takeshot()">Export Meme</button>
+        </form>        
+
+    </div>
+    <!-- <h1>Screenshot:</h1> -->
+    <div style="width: 50%; height: 70%;" id="output"></div>
+
+<script src="script.js"></script>
+  </body>
+</html>
